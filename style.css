@@ -97,7 +97,7 @@ header > nav {
     align-items: center;
     gap: 10px; 
 }
-header > nav > ul {
+header > nav > .mainNav {
     list-style: none;
     color: rgb(112, 112, 112);
     transition: .3s; 
@@ -107,10 +107,10 @@ header > nav > ul {
     cursor: pointer;
     gap: 20px;
 }
-header > nav > ul > li > a {
+header > nav > .mainNav > a, .navHp > nav > a {
     all: unset;
 }
-header > nav > ul > li:hover {
+header > nav > .mainNav > a > div:hover, .navHp > nav > a:hover {
     color: #D21312;
     transition: .3s; 
 }
@@ -142,6 +142,20 @@ header > nav:nth-child(2) {
 
 section > footer {
     margin-top: 30px;
+}
+.navHp {
+  display: none;
+}
+.navHp > nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.navHp > nav > a > div {
+  width: 100vw;
+    text-align: center;
+    padding: 5px;
 }
 
 #home {
@@ -186,7 +200,7 @@ section > footer {
         padding: 5px 10px;
         font-size: 20px;
     }
-
+    
     #home {
         padding: 80px 20px 0 20px;
     }
